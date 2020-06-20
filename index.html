@@ -10,7 +10,7 @@ var invocation = new XMLHttpRequest();
 
 function cors(){
   if(invocation) {
-    invocation.open('GET', "https://www.algolia.com/api/1/user", true);
+    invocation.open('GET', "https://www.algolia.com/account/details", true);
     invocation.withCredentials = true;
     invocation.send(); 
   }
